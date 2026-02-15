@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="120" viewBox="0 0 900 120">
+  <defs>
+    <linearGradient id="footer-neon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a0a0a" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#8d65f7" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#8d65f7" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#8d65f7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="footer-glow" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#8d65f7" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="120" fill="#0a0a0a"/>
+  <rect width="900" height="120" fill="url(#footer-glow)"/>
+
+  <!-- Top border -->
+  <line x1="50" y1="1" x2="850" y2="1" stroke="url(#footer-neon)" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="450" y="45" text-anchor="middle" fill="white" font-family="'Trebuchet MS', 'Arial Black', sans-serif" font-size="18" font-weight="900" letter-spacing="4">CODING<tspan fill="#8d65f7">ARISES</tspan></text>
+
+  <!-- Tagline -->
+  <text x="450" y="68" text-anchor="middle" fill="#52525b" font-family="'Segoe UI', Arial, sans-serif" font-size="11">Projetos reais. Engenharia real. Documentacao real.</text>
+
+  <!-- Copyright -->
+  <text x="450" y="100" text-anchor="middle" fill="#3f3f46" font-family="'Courier New', monospace" font-size="9">&copy; 2026 Coding Arises. Todos os direitos reservados.</text>
+</svg>

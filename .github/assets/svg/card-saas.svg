@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="320" viewBox="0 0 280 320">
+  <defs>
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1e2b"/>
+      <stop offset="100%" stop-color="#12141c"/>
+    </linearGradient>
+    <linearGradient id="progress-fill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8d65f7"/>
+      <stop offset="100%" stop-color="#b794f6"/>
+    </linearGradient>
+    <filter id="card-glow" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#8d65f7" flood-opacity="0.15"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="green-pulse">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-color="#22c55e" flood-opacity="0.6"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="img-clip">
+      <rect x="16" y="56" width="248" height="110" rx="8"/>
+    </clipPath>
+  </defs>
+
+  <!-- Card body -->
+  <rect width="280" height="320" rx="12" fill="url(#card-bg)" stroke="rgba(141,101,247,0.3)" stroke-width="1" filter="url(#card-glow)"/>
+
+  <!-- Header -->
+  <text x="16" y="32" fill="#8d65f7" font-family="'Courier New', monospace" font-size="10" font-weight="bold">#PROJECT_01</text>
+  <rect x="190" y="16" width="74" height="22" rx="4" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.3)" stroke-width="0.5"/>
+  <circle cx="200" cy="27" r="3" fill="#22c55e" filter="url(#green-pulse)"/>
+  <text x="212" y="31" fill="#4ade80" font-family="'Courier New', monospace" font-size="8" font-weight="bold">ACTIVE</text>
+
+  <!-- Divider -->
+  <line x1="16" y1="44" x2="264" y2="44" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <!-- Image area placeholder -->
+  <rect x="16" y="56" width="248" height="110" rx="8" fill="#0f1219" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+  <text x="140" y="108" text-anchor="middle" fill="#27272a" font-family="'Trebuchet MS', sans-serif" font-size="32" font-weight="900" letter-spacing="3">SaaS</text>
+  <text x="140" y="128" text-anchor="middle" fill="#3f3f46" font-family="'Courier New', monospace" font-size="9">React + Node + PostgreSQL</text>
+
+  <!-- Content -->
+  <text x="16" y="192" fill="#8d65f7" font-family="'Courier New', monospace" font-size="9" font-weight="bold">Full Stack</text>
+  <text x="16" y="214" fill="white" font-family="'Trebuchet MS', 'Arial Black', sans-serif" font-size="18" font-weight="900">SaaS Platform</text>
+  <text x="16" y="234" fill="#71717a" font-family="'Segoe UI', Arial, sans-serif" font-size="10">Plataforma multi-tenant para gestao</text>
+  <text x="16" y="248" fill="#71717a" font-family="'Segoe UI', Arial, sans-serif" font-size="10">empresarial com arq. hexagonal.</text>
+
+  <!-- Progress bar -->
+  <text x="16" y="275" fill="#52525b" font-family="'Courier New', monospace" font-size="8" letter-spacing="1">PROGRESS</text>
+  <text x="264" y="275" text-anchor="end" fill="#52525b" font-family="'Courier New', monospace" font-size="8">65%</text>
+  <rect x="16" y="280" width="248" height="4" rx="2" fill="rgba(255,255,255,0.05)"/>
+  <rect x="16" y="280" width="161" height="4" rx="2" fill="url(#progress-fill)"/>
+
+  <!-- Stack tags -->
+  <line x1="16" y1="296" x2="264" y2="296" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <rect x="16" y="302" width="48" height="16" rx="3" fill="rgba(255,255,255,0.05)"/>
+  <text x="40" y="313" text-anchor="middle" fill="#52525b" font-family="'Courier New', monospace" font-size="7">Node.js</text>
+  <rect x="70" y="302" width="42" height="16" rx="3" fill="rgba(255,255,255,0.05)"/>
+  <text x="91" y="313" text-anchor="middle" fill="#52525b" font-family="'Courier New', monospace" font-size="7">React</text>
+  <rect x="118" y="302" width="35" height="16" rx="3" fill="rgba(255,255,255,0.05)"/>
+  <text x="135" y="313" text-anchor="middle" fill="#52525b" font-family="'Courier New', monospace" font-size="7">PG</text>
+  <rect x="159" y="302" width="48" height="16" rx="3" fill="rgba(255,255,255,0.05)"/>
+  <text x="183" y="313" text-anchor="middle" fill="#52525b" font-family="'Courier New', monospace" font-size="7">Docker</text>
+</svg>

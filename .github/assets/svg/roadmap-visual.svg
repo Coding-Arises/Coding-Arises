@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" viewBox="0 0 900 200">
+  <defs>
+    <linearGradient id="line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8d65f7"/>
+      <stop offset="65%" stop-color="#8d65f7"/>
+      <stop offset="66%" stop-color="#3f3f46"/>
+      <stop offset="100%" stop-color="#3f3f46"/>
+    </linearGradient>
+    <filter id="node-glow-done" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#8d65f7" flood-opacity="0.5"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="node-glow-active" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#8d65f7" flood-opacity="0.8"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="200" fill="transparent"/>
+
+  <!-- Main timeline line -->
+  <line x1="80" y1="60" x2="820" y2="60" stroke="url(#line-grad)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Phase 01 - Completed -->
+  <g transform="translate(120, 60)">
+    <circle cx="0" cy="0" r="12" fill="#8d65f7" filter="url(#node-glow-done)"/>
+    <path d="M -4 0 L -1 3 L 5 -3" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="0" y="-28" text-anchor="middle" fill="#8d65f7" font-family="'Courier New', monospace" font-size="9" font-weight="bold" letter-spacing="1">PHASE 01</text>
+    <text x="0" y="35" text-anchor="middle" fill="white" font-family="'Trebuchet MS', sans-serif" font-size="13" font-weight="900">Discovery</text>
+    <text x="0" y="52" text-anchor="middle" fill="#71717a" font-family="'Segoe UI', Arial, sans-serif" font-size="9">Briefing, Personas</text>
+    <text x="0" y="65" text-anchor="middle" fill="#71717a" font-family="'Segoe UI', Arial, sans-serif" font-size="9">MVP, Backlog</text>
+    <!-- Completed badge -->
+    <rect x="-32" y="75" width="64" height="18" rx="4" fill="rgba(141,101,247,0.15)" stroke="rgba(141,101,247,0.3)" stroke-width="0.5"/>
+    <text x="0" y="87" text-anchor="middle" fill="#8d65f7" font-family="'Courier New', monospace" font-size="7" font-weight="bold">COMPLETO</text>
+  </g>
+
+  <!-- Phase 02 - Completed -->
+  <g transform="translate(350, 60)">
+    <circle cx="0" cy="0" r="12" fill="#8d65f7" filter="url(#node-glow-done)"/>
+    <path d="M -4 0 L -1 3 L 5 -3" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="0" y="-28" text-anchor="middle" fill="#8d65f7" font-family="'Courier New', monospace" font-size="9" font-weight="bold" letter-spacing="1">PHASE 02</text>
+    <text x="0" y="35" text-anchor="middle" fill="white" font-family="'Trebuchet MS', sans-serif" font-size="13" font-weight="900">Architecture</text>
+    <text x="0" y="52" text-anchor="middle" fill="#71717a" font-family="'Segoe UI', Arial, sans-serif" font-size="9">Solution, Tech Stack</text>
+    <text x="0" y="65" text-anchor="middle" fill="#71717a" font-family="'Segoe UI', Arial, sans-serif" font-size="9">Database, API</text>
+    <rect x="-32" y="75" width="64" height="18" rx="4" fill="rgba(141,101,247,0.15)" stroke="rgba(141,101,247,0.3)" stroke-width="0.5"/>
+    <text x="0" y="87" text-anchor="middle" fill="#8d65f7" font-family="'Courier New', monospace" font-size="7" font-weight="bold">COMPLETO</text>
+  </g>
+
+  <!-- Phase 03 - Active -->
+  <g transform="translate(580, 60)">
+    <circle cx="0" cy="0" r="14" fill="none" stroke="#8d65f7" stroke-width="2" filter="url(#node-glow-active)"/>
+    <circle cx="0" cy="0" r="6" fill="#8d65f7">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="-28" text-anchor="middle" fill="#8d65f7" font-family="'Courier New', monospace" font-size="9" font-weight="bold" letter-spacing="1">PHASE 03</text>
+    <text x="0" y="35" text-anchor="middle" fill="white" font-family="'Trebuchet MS', sans-serif" font-size="13" font-weight="900">Development</text>
+    <text x="0" y="52" text-anchor="middle" fill="#a1a1aa" font-family="'Segoe UI', Arial, sans-serif" font-size="9">Backend, Frontend</text>
+    <text x="0" y="65" text-anchor="middle" fill="#a1a1aa" font-family="'Segoe UI', Arial, sans-serif" font-size="9">Database, Tests</text>
+    <rect x="-42" y="75" width="84" height="18" rx="4" fill="rgba(141,101,247,0.2)" stroke="#8d65f7" stroke-width="1">
+      <animate attributeName="stroke-opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="0" y="87" text-anchor="middle" fill="white" font-family="'Courier New', monospace" font-size="7" font-weight="bold">EM ANDAMENTO</text>
+  </g>
+
+  <!-- Phase 04 - Pending -->
+  <g transform="translate(810, 60)">
+    <circle cx="0" cy="0" r="12" fill="none" stroke="#3f3f46" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="3" fill="#3f3f46"/>
+    <text x="0" y="-28" text-anchor="middle" fill="#52525b" font-family="'Courier New', monospace" font-size="9" font-weight="bold" letter-spacing="1">PHASE 04</text>
+    <text x="0" y="35" text-anchor="middle" fill="#71717a" font-family="'Trebuchet MS', sans-serif" font-size="13" font-weight="900">Deploy</text>
+    <text x="0" y="52" text-anchor="middle" fill="#52525b" font-family="'Segoe UI', Arial, sans-serif" font-size="9">CI/CD, Cloud</text>
+    <text x="0" y="65" text-anchor="middle" fill="#52525b" font-family="'Segoe UI', Arial, sans-serif" font-size="9">Monitoring, Launch</text>
+    <rect x="-32" y="75" width="64" height="18" rx="4" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+    <text x="0" y="87" text-anchor="middle" fill="#52525b" font-family="'Courier New', monospace" font-size="7" font-weight="bold">PENDENTE</text>
+  </g>
+</svg>

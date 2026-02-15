@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="320" viewBox="0 0 280 320">
+  <defs>
+    <linearGradient id="card-bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1e2b"/>
+      <stop offset="100%" stop-color="#12141c"/>
+    </linearGradient>
+    <linearGradient id="progress-done" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Card body -->
+  <rect width="280" height="320" rx="12" fill="url(#card-bg3)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="16" y="32" fill="#8d65f7" font-family="'Courier New', monospace" font-size="10" font-weight="bold">#PROJECT_00</text>
+  <rect x="175" y="16" width="89" height="22" rx="4" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.3)" stroke-width="0.5"/>
+  <text x="219" y="31" text-anchor="middle" fill="#4ade80" font-family="'Courier New', monospace" font-size="8" font-weight="bold">COMPLETED</text>
+
+  <!-- Divider -->
+  <line x1="16" y1="44" x2="264" y2="44" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <!-- Image area -->
+  <rect x="16" y="56" width="248" height="110" rx="8" fill="#0f1219" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+  <text x="140" y="108" text-anchor="middle" fill="#27272a" font-family="'Trebuchet MS', sans-serif" font-size="28" font-weight="900" letter-spacing="2">DeFi</text>
+  <text x="140" y="128" text-anchor="middle" fill="#3f3f46" font-family="'Courier New', monospace" font-size="9">Next.js + Ethers.js + Solidity</text>
+
+  <!-- Content -->
+  <text x="16" y="192" fill="#8d65f7" font-family="'Courier New', monospace" font-size="9" font-weight="bold">Web3</text>
+  <text x="16" y="214" fill="white" font-family="'Trebuchet MS', 'Arial Black', sans-serif" font-size="18" font-weight="900">DeFi Dashboard</text>
+  <text x="16" y="234" fill="#71717a" font-family="'Segoe UI', Arial, sans-serif" font-size="10">Interface de analytics para protocolos</text>
+  <text x="16" y="248" fill="#71717a" font-family="'Segoe UI', Arial, sans-serif" font-size="10">DeFi integrando multiplas chains.</text>
+
+  <!-- Progress bar -->
+  <text x="16" y="275" fill="#52525b" font-family="'Courier New', monospace" font-size="8" letter-spacing="1">PROGRESS</text>
+  <text x="264" y="275" text-anchor="end" fill="#4ade80" font-family="'Courier New', monospace" font-size="8">100%</text>
+  <rect x="16" y="280" width="248" height="4" rx="2" fill="rgba(255,255,255,0.05)"/>
+  <rect x="16" y="280" width="248" height="4" rx="2" fill="url(#progress-done)"/>
+
+  <!-- Stack tags -->
+  <line x1="16" y1="296" x2="264" y2="296" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <rect x="16" y="302" width="48" height="16" rx="3" fill="rgba(255,255,255,0.05)"/>
+  <text x="40" y="313" text-anchor="middle" fill="#52525b" font-family="'Courier New', monospace" font-size="7">Next.js</text>
+  <rect x="70" y="302" width="55" height="16" rx="3" fill="rgba(255,255,255,0.05)"/>
+  <text x="97" y="313" text-anchor="middle" fill="#52525b" font-family="'Courier New', monospace" font-size="7">Ethers.js</text>
+  <rect x="131" y="302" width="52" height="16" rx="3" fill="rgba(255,255,255,0.05)"/>
+  <text x="157" y="313" text-anchor="middle" fill="#52525b" font-family="'Courier New', monospace" font-size="7">Solidity</text>
+</svg>

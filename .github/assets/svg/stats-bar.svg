@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="100" viewBox="0 0 900 100">
+  <defs>
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0)" />
+      <stop offset="50%" stop-color="rgba(255,255,255,0.1)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="100" fill="#0a0a0a"/>
+  <rect width="900" height="100" fill="rgba(0,0,0,0.3)"/>
+
+  <!-- Top/Bottom borders -->
+  <line x1="0" y1="0" x2="900" y2="0" stroke="url(#border-grad)" stroke-width="1"/>
+  <line x1="0" y1="99" x2="900" y2="99" stroke="url(#border-grad)" stroke-width="1"/>
+
+  <!-- Stat 1: Projetos -->
+  <g transform="translate(112, 50)">
+    <text x="0" y="-8" text-anchor="middle" fill="white" font-family="'Trebuchet MS', 'Arial Black', sans-serif" font-size="28" font-weight="900">12+</text>
+    <text x="0" y="18" text-anchor="middle" fill="#52525b" font-family="'Courier New', monospace" font-size="9" letter-spacing="4" font-weight="bold">PROJETOS</text>
+  </g>
+
+  <!-- Separator -->
+  <line x1="225" y1="20" x2="225" y2="80" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <!-- Stat 2: Episodios -->
+  <g transform="translate(337, 50)">
+    <text x="0" y="-8" text-anchor="middle" fill="white" font-family="'Trebuchet MS', 'Arial Black', sans-serif" font-size="28" font-weight="900">45</text>
+    <text x="0" y="18" text-anchor="middle" fill="#52525b" font-family="'Courier New', monospace" font-size="9" letter-spacing="4" font-weight="bold">EPISODIOS</text>
+  </g>
+
+  <!-- Separator -->
+  <line x1="450" y1="20" x2="450" y2="80" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <!-- Stat 3: Comunidade -->
+  <g transform="translate(562, 50)">
+    <text x="0" y="-8" text-anchor="middle" fill="white" font-family="'Trebuchet MS', 'Arial Black', sans-serif" font-size="28" font-weight="900">2.5k</text>
+    <text x="0" y="18" text-anchor="middle" fill="#52525b" font-family="'Courier New', monospace" font-size="9" letter-spacing="4" font-weight="bold">COMUNIDADE</text>
+  </g>
+
+  <!-- Separator -->
+  <line x1="675" y1="20" x2="675" y2="80" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <!-- Stat 4: Open Source -->
+  <g transform="translate(787, 50)">
+    <text x="0" y="-8" text-anchor="middle" fill="white" font-family="'Trebuchet MS', 'Arial Black', sans-serif" font-size="28" font-weight="900">100%</text>
+    <text x="0" y="18" text-anchor="middle" fill="#52525b" font-family="'Courier New', monospace" font-size="9" letter-spacing="4" font-weight="bold">OPEN SOURCE</text>
+  </g>
+</svg>

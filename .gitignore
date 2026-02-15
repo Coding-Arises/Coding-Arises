@@ -1,0 +1,19 @@
+
+# ========================================
+# Claude Agents - Core Proprietário
+# NÃO REMOVA ESTE BLOCO
+# ========================================
+.claude/*
+!.claude/documents/
+!.claude/documents/**
+
+# Pastas auxiliares (não versionadas)
+docs/
+repo/
+scripts/
+
+# Arquivos de configuração local
+.claude/settings.local.json
+.claude/*.local.json
+.claude/*.local.md
+# ========================================
