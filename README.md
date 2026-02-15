@@ -10,9 +10,6 @@
 
 </div>
 
-<!-- Divider Neon -->
-<img src=".github/assets/svg/divider-neon.svg" alt="" width="100%" />
-
 <!-- Stats Bar -->
 <div align="center">
 <img src=".github/assets/svg/stats-bar.svg" alt="12+ Projetos | 45 Episódios | 2.5k Comunidade | 100% Open Source" width="100%" />
@@ -30,7 +27,7 @@
 
 O formato segue **temporadas e episódios**: cada temporada é um projeto completo, e cada episódio cobre uma etapa real do desenvolvimento — desde a descoberta de produto até a infraestrutura em produção.
 
-> *"Um laboratório aberto de engenharia de software onde você acompanha cada decisão, cada linha de código e cada deploy."*
+> _"Um laboratório aberto de engenharia de software onde você acompanha cada decisão, cada linha de código e cada deploy."_
 
 <br/>
 
@@ -172,5 +169,7 @@ O formato segue **temporadas e episódios**: cada temporada é um projeto comple
 
 <br/>
 
-<!-- Footer Banner SVG -->
-<img src=".github/assets/svg/footer-banner.svg" alt="Coding Arises - Todos os direitos reservados" width="100%" />
+<!-- Footer Banner -->
+<div align="center">
+<img src="assets/coding-arises-bg-light.svg" alt="Coding Arises" width="400" />
+</div>

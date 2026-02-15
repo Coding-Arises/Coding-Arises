@@ -51,7 +51,16 @@
       "mcp__github__get_me",
       "mcp__github__search_repositories",
       "mcp__github__get_file_contents",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(git stash:*)",
+      "Bash(git reflog expire:*)",
+      "Bash(git gc:*)",
+      "Bash(git update-ref:*)",
+      "Bash(git fsck:*)",
+      "Bash(git -C /c/workspace/Coding-Arises status)",
+      "Bash(git -C /c/workspace/Coding-Arises diff .gitignore)",
+      "Bash(git -C /c/workspace/Coding-Arises diff README.md)",
+      "Bash(git -C /c/workspace/Coding-Arises log --oneline -5)"
     ],
     "deny": [
       "Bash(rm -rf /*:*)",

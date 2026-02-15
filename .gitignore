@@ -9,6 +9,7 @@
 !.claude/settings.local.json
 
 # Pastas auxiliares (não versionadas)
+docs/
 repo/
 scripts/
 

@@ -52,6 +52,26 @@
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/>
     </pattern>
+    <!-- Icon glow filter -->
+    <filter id="icon-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#8200DB" flood-opacity="0.7"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- ARISES text glow -->
+    <filter id="arises-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#9810FA" flood-opacity="0.5"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
   <!-- Base background -->
@@ -77,27 +97,70 @@
     <text x="0" y="5" text-anchor="middle" fill="#8d65f7" font-family="'Courier New', monospace" font-size="11" font-weight="bold" letter-spacing="3">SEASON 1: SAAS</text>
   </g>
 
-  <!-- Main title -->
-  <text x="450" y="175" text-anchor="middle" fill="white" font-family="'Trebuchet MS', 'Arial Black', sans-serif" font-size="56" font-weight="900" letter-spacing="6">CODING</text>
-  <text x="450" y="235" text-anchor="middle" fill="url(#title-gradient)" font-family="'Trebuchet MS', 'Arial Black', sans-serif" font-size="56" font-weight="900" letter-spacing="6" filter="url(#text-glow)">ARISES</text>
+  <!-- Logo oficial Coding Arises -->
+  <g transform="translate(123, 102) scale(0.65)">
+    <!-- Robot icon -->
+    <g filter="url(#icon-glow)">
+      <path d="M240.679 129.796V168.665L159.361 239.576" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M78.0426 129.796V168.665L159.361 239.576" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M71.3682 95.1021V111.366" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M78.0427 95.1021V106.833L95.1715 149.492L100.362 152.158L102.438 160.157" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M247.354 95.1021V111.366" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M240.679 95.1021V106.833L223.55 149.492L218.36 152.158L216.284 160.157" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M139.031 190.895V204.049C139.031 204.049 139.328 207.317 140.575 208.832C141.757 210.268 144.693 211.224 144.693 211.224H173C173 211.224 175.799 210.144 177.117 208.832C178.62 207.336 179.69 204.049 179.69 204.049V190.895" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M200.02 158.367L194.462 182.296C194.462 182.296 194.119 185.885 192.794 187.613C191.04 189.902 186.124 190.804 186.124 190.804C186.124 190.804 181.713 191.008 178.898 190.804C170.983 190.228 159.361 185.229 159.361 185.229" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M195.954 173.408C195.954 173.408 191.784 173.873 189.178 173.408C186.98 173.016 183.756 171.582 183.756 171.582" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M193.611 182.573C193.611 182.573 185.311 181.626 180.251 180.29C175.985 179.164 169.871 176.664 169.871 176.664" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M118.702 158.367L124.26 182.296C124.26 182.296 124.602 185.885 125.928 187.613C127.682 189.902 132.598 190.804 132.598 190.804C132.598 190.804 137.009 191.008 139.823 190.804C147.738 190.228 159.361 185.229 159.361 185.229" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M122.768 173.408C122.768 173.408 126.938 173.873 129.544 173.408C131.742 173.016 134.965 171.582 134.965 171.582" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M125.111 182.573C125.111 182.573 133.411 181.626 138.471 180.29C142.737 179.164 148.851 176.664 148.851 176.664" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M159.361 172.354V184.552" stroke="#6E11B0" stroke-width="4.34783" stroke-linecap="round"/>
+      <path d="M140.048 156.091C140.048 156.091 144.934 163.231 149.245 166.546C153.132 169.535 160.377 172.354 160.377 172.354" stroke="#6E11B0" stroke-width="4.34783" stroke-linecap="round"/>
+      <path d="M179.69 156.091C179.69 156.091 174.805 163.231 170.494 166.546C166.606 169.535 159.361 172.354 159.361 172.354" stroke="#6E11B0" stroke-width="4.34783" stroke-linecap="round"/>
+      <path d="M135.258 108.214L139.361 120.821L113.72 116.787L102.438 95.1021L135.258 108.214Z" fill="#030712"/>
+      <path d="M159.361 160.157C159.361 160.157 151.765 159.373 147.053 158.139C143.995 157.339 139.361 155.618 139.361 155.618V120.821M139.361 120.821L135.258 108.214L102.438 95.1021L113.72 116.787L139.361 120.821Z" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M134.52 108.849L109.553 99.168C109.553 99.168 114.547 103.524 118.042 107.881C119.709 109.959 122.536 115.141 122.536 115.141C122.536 115.141 126.813 116.266 129.526 117.077C132.473 117.958 138.015 119.498 138.015 119.498C138.015 119.498 137.09 116.793 136.517 115.141C135.599 112.496 134.52 108.849 134.52 108.849Z" fill="#E9D4FF"/>
+      <path d="M184.48 108.214L180.377 120.821L206.018 116.787L217.3 95.1021L184.48 108.214Z" fill="#020618"/>
+      <path d="M160.377 160.157C160.377 160.157 167.973 159.373 172.685 158.139C175.743 157.339 180.377 155.618 180.377 155.618V120.821M180.377 120.821L184.48 108.214L217.3 95.1021L206.018 116.787L180.377 120.821Z" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M185.219 108.849L210.185 99.168C210.185 99.168 205.192 103.524 201.696 107.881C200.029 109.959 197.202 115.141 197.202 115.141C197.202 115.141 192.925 116.266 190.212 117.077C187.266 117.958 181.723 119.498 181.723 119.498C181.723 119.498 182.649 116.793 183.221 115.141C184.139 112.496 185.219 108.849 185.219 108.849Z" fill="#E9D4FF"/>
+      <path d="M208.152 40H255.272V74.6103H281.338L250.259 149.78" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M110.57 40H63.4499V74.6103H37.3835L68.4627 149.78" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M148.598 113.186L142.021 103.804L118.702 40H159.361" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M170.124 113.186L176.701 103.804L200.02 40H159.361" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M103.565 45.734H69.9109L85.6499 80.6591L117.26 40" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+      <path d="M215.303 45.7637H248.956L233.218 80.8696L201.608 40" stroke="#6E11B0" stroke-width="3.47826" stroke-linecap="round"/>
+    </g>
 
-  <!-- Title gradient for ARISES -->
-  <defs>
-    <linearGradient id="title-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#8d65f7"/>
-      <stop offset="50%" stop-color="#b794f6"/>
-      <stop offset="100%" stop-color="#ffffff"/>
-    </linearGradient>
-  </defs>
+    <!-- Text CODING -->
+    <path d="M408.727 71.0814V79.0945H331.802V117.557H408.727V126.104L400.18 135.186H323.255L314.173 126.104V71.0814L323.255 62H400.18L408.727 71.0814Z" fill="#FAF5FF"/>
+    <path d="M536.936 70.5472V79.0945H460.011V117.023H519.307V87.6417H536.936V125.57L528.388 134.651H451.998L442.916 125.57V70.5472L451.998 62H528.388L536.936 70.5472Z" fill="#FAF5FF"/>
+    <path d="M571.125 134.651V87.6417H588.219V117.557H648.05V79.0945H571.125V62H656.063L665.144 71.6156V126.104L656.063 134.651H571.125Z" fill="#FAF5FF"/>
+    <path d="M699.333 134.651V62H716.428V134.651H699.333Z" fill="#FAF5FF"/>
+    <path d="M750.617 134.651V62H771.985L825.405 113.283V62H842.499V134.651H821.131L767.711 83.3681V134.651H750.617Z" fill="#FAF5FF"/>
+    <path d="M876.154 70.5472V79.6287H970.708V70.5472L961.626 62H884.701L876.154 70.5472Z" fill="#FAF5FF"/>
+    <path d="M876.154 125.57V87.6417H893.248V117.023H953.079V104.736H918.89V87.6417H970.173V125.57L961.092 134.651H884.701L876.154 125.57Z" fill="#FAF5FF"/>
+
+    <!-- Text ARISES -->
+    <g filter="url(#arises-glow)">
+      <path d="M394.633 158L354.173 217.601H370.705L401.593 172.356H405.074L435.962 217.601H452.059L412.47 158H394.633Z" fill="#9810FA"/>
+      <path d="M419.865 193.239H387.237L379.841 203.68H426.826L419.865 193.239Z" fill="#9810FA"/>
+      <path d="M477.291 158V172.356H547.334V179.317H477.291V217.601H491.648V193.239H528.627L543.853 217.601H561.255L543.853 193.239H554.294L561.255 186.278V165.831L554.294 158H477.291Z" fill="#9810FA"/>
+      <path d="M589.098 217.601V158H603.019V217.601H589.098Z" fill="#9810FA"/>
+      <path d="M714.391 164.961V171.921H644.784V178.882H706.995L714.391 185.843V209.77L706.995 217.601H637.823L630.862 209.77V203.245H700.904V192.804H637.823L630.862 184.103V164.961L637.823 158H706.995L714.391 164.961Z" fill="#9810FA"/>
+      <path d="M742.234 164.091V171.486H818.802V164.091L811.841 158H749.194L742.234 164.091Z" fill="#9810FA"/>
+      <path d="M742.234 209.335V178.882H790.524V192.369H755.72V203.68H818.802V209.335L811.406 217.166H749.63L742.234 209.335Z" fill="#9810FA"/>
+      <path d="M930.174 164.961V171.921H860.566V178.882H922.778L930.174 185.843V209.77L922.778 217.601H853.606L846.645 209.77V203.245H916.687V192.804H853.606L846.645 184.103V164.961L853.606 158H922.778L930.174 164.961Z" fill="#9810FA"/>
+    </g>
+  </g>
 
   <!-- Tagline -->
-  <text x="450" y="275" text-anchor="middle" fill="#a1a1aa" font-family="'Segoe UI', Arial, sans-serif" font-size="16" letter-spacing="1">Projetos reais. Engenharia real. Documentao real.</text>
+  <text x="450" y="280" text-anchor="middle" fill="#a1a1aa" font-family="'Segoe UI', Arial, sans-serif" font-size="16" letter-spacing="1">Projetos reais. Engenharia real. Documenta&#231;&#227;o real.</text>
 
   <!-- Subtitle -->
-  <text x="450" y="300" text-anchor="middle" fill="#71717a" font-family="'Segoe UI', Arial, sans-serif" font-size="13">Do briefing ao deploy  |  Software construdo em pblico</text>
+  <text x="450" y="305" text-anchor="middle" fill="#71717a" font-family="'Segoe UI', Arial, sans-serif" font-size="13">Do briefing ao deploy  |  Software constru&#237;do em p&#250;blico</text>
 
   <!-- Tech tags -->
-  <g transform="translate(450, 345)">
+  <g transform="translate(450, 350)">
     <rect x="-200" y="-12" width="90" height="24" rx="4" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
     <text x="-155" y="4" text-anchor="middle" fill="#8d65f7" font-family="'Courier New', monospace" font-size="10">Full Stack</text>
 
