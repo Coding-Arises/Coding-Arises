@@ -1,0 +1,283 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git branch:*)",
+      "Bash(git show:*)",
+      "Bash(git ls-files:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(npm list:*)",
+      "Bash(npm info:*)",
+      "Bash(npm view:*)",
+      "Bash(npm outdated:*)",
+      "Bash(npm audit:*)",
+      "Bash(npx:*)",
+      "Bash(node --version:*)",
+      "Bash(go version:*)",
+      "Bash(go list:*)",
+      "Bash(python --version:*)",
+      "Bash(pip list:*)",
+      "Bash(pip show:*)",
+      "Bash(docker ps:*)",
+      "Bash(docker images:*)",
+      "Bash(docker logs:*)",
+      "Bash(kubectl get:*)",
+      "Bash(kubectl describe:*)",
+      "Bash(kubectl logs:*)",
+      "Bash(terraform plan:*)",
+      "Bash(terraform show:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(pwd:*)",
+      "Bash(tree:*)",
+      "Bash(dir:*)",
+      "Bash(type:*)",
+      "Bash(findstr:*)",
+      "Bash(wc:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(tmux list-sessions:*)",
+      "Bash(tmux has-session:*)",
+      "Bash(git config:*)",
+      "Bash(git fetch:*)",
+      "WebFetch(domain:github.com)",
+      "mcp__github__get_me",
+      "mcp__github__search_repositories",
+      "mcp__github__get_file_contents",
+      "Bash(git reset:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf /*:*)",
+      "Bash(rm -rf /:*)",
+      "Bash(sudo rm:*)",
+      "Bash(sudo:*)",
+      "Bash(chmod 777:*)",
+      "Bash(> /dev:*)",
+      "Bash(del /f /s /q C:\\:*)",
+      "Bash(format:*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git clean -fd:*)",
+      "Bash(npm publish:*)",
+      "Bash(docker rm -f:*)",
+      "Bash(docker rmi -f:*)",
+      "Bash(kubectl delete:*)",
+      "Bash(terraform destroy:*)",
+      "Bash(DROP DATABASE:*)",
+      "Bash(DROP TABLE:*)",
+      "Bash(TRUNCATE:*)",
+      "Bash(curl * | bash:*)",
+      "Bash(wget * | bash:*)",
+      "Bash(eval:*)"
+    ],
+    "ask": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git merge:*)",
+      "Bash(git rebase:*)",
+      "Bash(git checkout:*)",
+      "Bash(git switch:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(npm test:*)",
+      "Bash(npm build:*)",
+      "Bash(npm start:*)",
+      "Bash(node:*)",
+      "Bash(go run:*)",
+      "Bash(go build:*)",
+      "Bash(go test:*)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(docker run:*)",
+      "Bash(docker build:*)",
+      "Bash(docker-compose:*)",
+      "Bash(kubectl apply:*)",
+      "Bash(kubectl create:*)",
+      "Bash(terraform apply:*)",
+      "Bash(terraform init:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(rm:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(tmux new-session:*)",
+      "Bash(tmux send-keys:*)",
+      "Bash(tmux attach-session:*)",
+      "Bash(tmux kill-session:*)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "context7",
+    "github"
+  ],
+  "PreToolUse": [
+    {
+      "matcher": "Bash",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "node .claude/hooks/validate-workflow.js",
+          "timeout": 5
+        }
+      ]
+    }
+  ],
+  "PostToolUse": [
+    {
+      "matcher": "Write",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "node .claude/hooks/validate-approval.js",
+          "timeout": 5
+        },
+        {
+          "type": "command",
+          "command": "node .claude/hooks/tb-no-tech.js",
+          "timeout": 5
+        },
+        {
+          "type": "command",
+          "command": "node .claude/hooks/validate-arb.js",
+          "timeout": 5
+        },
+        {
+          "type": "command",
+          "command": "node .claude/hooks/compliance-gate.js",
+          "timeout": 10
+        },
+        {
+          "type": "command",
+          "command": "node .claude/hooks/validate-signoff.js",
+          "timeout": 5
+        },
+        {
+          "type": "command",
+          "command": "node .claude/hooks/checkpoint-counter.js",
+          "timeout": 5
+        },
+        {
+          "type": "command",
+          "command": "node .claude/hooks/context-monitor.js",
+          "timeout": 5
+        }
+      ]
+    },
+    {
+      "matcher": "Edit",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "node .claude/hooks/validate-approval.js",
+          "timeout": 5
+        },
+        {
+          "type": "command",
+          "command": "node .claude/hooks/checkpoint-counter.js",
+          "timeout": 5
+        },
+        {
+          "type": "command",
+          "command": "node .claude/hooks/task-order.js",
+          "timeout": 5
+        },
+        {
+          "type": "command",
+          "command": "node .claude/hooks/context-monitor.js",
+          "timeout": 5
+        }
+      ]
+    },
+    {
+      "matcher": "Read",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "node .claude/hooks/context-monitor.js",
+          "timeout": 5
+        }
+      ]
+    },
+    {
+      "matcher": "Bash",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "node .claude/hooks/context-monitor.js",
+          "timeout": 5
+        }
+      ]
+    },
+    {
+      "matcher": "Task",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "node .claude/hooks/context-monitor.js",
+          "timeout": 5
+        }
+      ]
+    }
+  ],
+  "UserPromptSubmit": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "node .claude/hooks/prompt-submit.js",
+          "timeout": 5
+        }
+      ]
+    }
+  ],
+  "SessionStart": [
+    {
+      "matcher": "*",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "node .claude/hooks/session-start.js",
+          "timeout": 5
+        },
+        {
+          "type": "command",
+          "command": "node .claude/hooks/auto-discovery.js",
+          "timeout": 10
+        }
+      ]
+    }
+  ],
+  "Stop": [
+    {
+      "matcher": "*",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "node .claude/hooks/session-stop.js",
+          "timeout": 10
+        },
+        {
+          "type": "command",
+          "command": "bash .claude/hooks/scripts/swarm-idle-notify.sh 2>/dev/null || true",
+          "timeout": 5
+        },
+        {
+          "type": "command",
+          "command": "bash .claude/hooks/swarm-error-notify.sh 2>/dev/null || true",
+          "timeout": 5
+        }
+      ]
+    }
+  ]
+}

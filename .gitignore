@@ -6,14 +6,12 @@
 .claude/*
 !.claude/documents/
 !.claude/documents/**
+!.claude/settings.local.json
 
 # Pastas auxiliares (não versionadas)
-docs/
 repo/
 scripts/
 
 # Arquivos de configuração local
-.claude/settings.local.json
-.claude/*.local.json
 .claude/*.local.md
 # ========================================
